@@ -1,1 +1,5 @@
-<p>member-list works!</p>
+<div class="flex flex-col gap-3">
+  @for (member of members$ | async; track member.id) {
+    <div>{{member.displayName}}</div>
+  }
+</div>
