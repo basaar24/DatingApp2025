@@ -1,3 +1,36 @@
 @if (member$ | async; as member) {
-  <h1 class="text-3xl">{{member.displayName}}</h1>
+<div class="flex gap-6">
+  <div class="card bg-base-100 flex flex-col h-[85vh] w-1/4">
+    <img class="rounded-full mx-10 mt-3 object-cover" src="{{member.imageUrl || './user.jpg'}}"
+      alt="{{member.displayName}}">
+    <div class="card-body">
+      <div class="flex flex-col items-center">
+        <div class="flex text-2xl text-primary">
+          {{member.displayName}}, 25
+        </div>
+        <div class="text-5m">
+          {{member.city}}, {{member.country}}
+        </div>
+      </div>
+      <div class="divider"></div>
+      <ul class="menu rounded-box w-full text-xl">
+        <li><a routerLink="profile" routerLinkActive="text-primary">Profile</a></li>
+        <li><a routerLink="profile" routerLinkActive="text-primary">Photos</a></li>
+        <li><a routerLink="profile" routerLinkActive="text-primary">Messages</a></li>
+      </ul>
+    </div>
+    <div class="card-actions justify-between gap-2 px-2 mb-3">
+      <button class="btn btn-info flex-1">Go back</button>
+      <button class="btn btn-primary flex-1">Like user</button>
+    </div>
+  </div>
+
+  <div class="card bg-base-100 w-3/4 p-6">
+    <h3 class="card-title text-3xl text-primary">Profile</h3>
+    <div class="divider"></div>
+  </div>
+
+</div>
+} @else {
+  <div>Member not found</div>
 }
