@@ -15,8 +15,8 @@
       <div class="divider"></div>
       <ul class="menu rounded-box w-full text-xl">
         <li><a routerLink="profile" routerLinkActive="text-primary">Profile</a></li>
-        <li><a routerLink="profile" routerLinkActive="text-primary">Photos</a></li>
-        <li><a routerLink="profile" routerLinkActive="text-primary">Messages</a></li>
+        <li><a routerLink="photos" routerLinkActive="text-primary">Photos</a></li>
+        <li><a routerLink="messages" routerLinkActive="text-primary">Messages</a></li>
       </ul>
     </div>
     <div class="card-actions justify-between gap-2 px-2 mb-3">
@@ -26,8 +26,11 @@
   </div>
 
   <div class="card bg-base-100 w-3/4 p-6">
-    <h3 class="card-title text-3xl text-primary">Profile</h3>
+    <h3 class="card-title text-3xl text-primary">{{title()}}</h3>
     <div class="divider"></div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
   </div>
 
 </div>
