@@ -6,7 +6,7 @@
     <div class="card-body">
       <div class="flex flex-col items-center">
         <div class="flex text-2xl text-primary">
-          {{member.displayName}}, 25
+          {{member.displayName}}, {{member.birthDay | age}}
         </div>
         <div class="text-5m">
           {{member.city}}, {{member.country}}
