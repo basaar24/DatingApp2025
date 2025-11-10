@@ -52,6 +52,7 @@ Generated\ Files/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 *.trx
+[Cc]overage[Rr]eport*/
 
 # NUnit
 *.VisualState.xml
@@ -416,3 +417,5 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+*.db*
