@@ -1,11 +1,11 @@
 meta {
   name: Login - Valid
   type: http
-  seq: 1
+  seq: 3
 }
 
 post {
-  url: https://localhost:5001/api/account/login
+  url: {{baseUrl}}/api/account/login
   body: json
   auth: inherit
 }
@@ -20,7 +20,7 @@ body:json {
 tests {
   test("Should be able to login", function() {
     expect(res.getStatus()).to.equal(200);
-  })
+  });
   
   const data = res.body;
   bru.setEnvVar('authToken', data.token);

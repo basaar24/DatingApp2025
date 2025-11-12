@@ -1,0 +1,22 @@
+meta {
+  name: Members - Unauthorized
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/members
+  body: none
+  auth: none
+}
+
+tests {
+  test("Should return unauthorized", function() {
+    expect(res.getStatus()).to.equal(401);
+  });
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
